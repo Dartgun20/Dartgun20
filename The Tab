@@ -1,0 +1,201 @@
+<body ng-app="Dartgun20Tab" class="ng-scope">&gt;
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#ff5722">
+  <title>FidgetTab</title><!--DUCKSYDUCKSYDUCKSYDUCKSY-->
+  <link rel="shortcut icon" href="fidgettabpng.png">
+  <link rel="stylesheet" href="angular-material.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+  .spinning {
+      animation:spin 2s infinite;
+      animation-fill-mode: forwards; 
+      transition: linear 300ms;
+  }
+  @keyframes spin {
+      0% {tranform:rotate(0deg);}
+      25% {transform:rotate(180deg);}
+      50% {transform:rotate(180deg);}
+      75% {transform:rotate(360deg);}
+      100% {transform:rotate(360deg);}
+  }
+  body {
+      /*background-color:#ffc107;*/
+      /*padding:16px;*/
+      font-family:"Roboto", sans-serif;
+  }
+  md-toolbar {
+      position:fixed; top:0; right:0;
+      
+  }
+  #hidden-tabs > md-tabs-wrapper {
+      display:none!important;
+      border: none!important;
+  }
+  
+  #hidden-tabs > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {
+      display:none!important;
+  }
+  
+  #hidden-tabs {
+      padding:16px;
+      top:50px;
+      width:100%;
+  }
+  </style>
+
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="angular.js"></script>
+  <script src="angular-animate.js"></script>
+  <script src="angular-aria.js"></script>
+  <script src="angular-messages.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Angular Material Library -->
+  <script src="angular-material.js"></script>
+  <!-- Your application bootstrap  -->
+  <md-toolbar style="position:fixed;" md-scroll-shrink="true" id="toolbar" class="_md _md-toolbar-transitions">
+    
+    <div class="md-toolbar-tools">
+      <h2 md-truncate="" flex="" class="flex">FidgetTab</h2>
+        
+      <button class="md-button md-ink-ripple" type="button" ng-transclude=""><span class="ng-scope">
+        It's Your Boi Dartgun20!!!!!!
+      </span></button>
+    </div>
+    <md-tabs md-selected="currentTab" class="ng-isolate-scope md-no-tab-content"><md-tabs-wrapper> <md-tab-data>
+        <md-tab id="tab0" aria-controls="tab0-content" class="ng-scope ng-isolate-scope"></md-tab>
+        <md-tab id="tab1" aria-controls="tab1-content" class="ng-scope ng-isolate-scope"></md-tab>
+        <md-tab id="tab2" aria-controls="tab2-content" class="ng-scope ng-isolate-scope"></md-tab>
+        <md-tab id="tab3" aria-controls="tab3-content" class="ng-scope ng-isolate-scope"></md-tab>
+        <md-tab id="tab4" aria-controls="tab4-content" class="ng-scope ng-isolate-scope"></md-tab>
+        <md-tab id="tab5" aria-controls="tab5-content" class="ng-scope ng-isolate-scope"></md-tab>
+    </md-tab-data> <!-- ngIf: $mdTabsCtrl.shouldPaginate --> <!-- ngIf: $mdTabsCtrl.shouldPaginate --> <md-tabs-canvas tabindex="0" aria-activedescendant="tab-item-0" ng-focus="$mdTabsCtrl.redirectFocus()" ng-class="{ 'md-paginated': $mdTabsCtrl.shouldPaginate, 'md-center-tabs': $mdTabsCtrl.shouldCenterTabs }" ng-keydown="$mdTabsCtrl.keydown($event)" role="tablist"> <md-pagination-wrapper ng-class="{ 'md-center-tabs': $mdTabsCtrl.shouldCenterTabs }" md-tab-scroll="$mdTabsCtrl.scroll($event)" style="width: 753px; transform: translate3d(0px, 0px, 0px);"> <!-- ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple md-active" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-0" aria-selected="true" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 811px;"><span class="ng-scope">Search </span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-1" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 811px;"><span class="ng-scope">Inputs </span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-2" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 811px;"><span class="ng-scope">Buttons </span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-3" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 811px;"><span class="ng-scope">More buttons </span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-4" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 811px;"><span class="ng-scope">Even more buttons </span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-5" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 811px;"><span class="ng-scope">Sliders </span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --> <md-ink-bar class="" style="left: 0px; right: 652px;"></md-ink-bar> </md-pagination-wrapper> <md-tabs-dummy-wrapper class="md-visually-hidden md-dummy-wrapper"> <!-- ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-0" role="tab" aria-controls="tab-content-0" aria-selected="true" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Search </span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-1" role="tab" aria-controls="tab-content-1" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Inputs </span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-2" role="tab" aria-controls="tab-content-2" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Buttons </span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-3" role="tab" aria-controls="tab-content-3" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">More buttons </span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-4" role="tab" aria-controls="tab-content-4" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Even more buttons </span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-5" role="tab" aria-controls="tab-content-5" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Sliders </span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --> </md-tabs-dummy-wrapper> </md-tabs-canvas> </md-tabs-wrapper> <md-tabs-content-wrapper ng-show="$mdTabsCtrl.hasContent &amp;&amp; $mdTabsCtrl.selectedIndex >= 0" class="_md ng-hide" aria-hidden="true"> <!-- ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --> </md-tabs-content-wrapper></md-tabs>
+</md-toolbar><div style="height:47px;"></div>
+<md-tabs md-dynamic-height="" md-selected="currentTab" class="noTabPanel ng-isolate-scope md-dynamic-height" id="hidden-tabs"><md-tabs-wrapper> <md-tab-data>
+    <md-tab label="Search" class="ng-scope ng-isolate-scope"></md-tab>
+    <md-tab label="Inputs" class="ng-scope ng-isolate-scope"></md-tab>
+                <md-tab label="Buttons" class="ng-scope ng-isolate-scope"></md-tab>
+                <md-tab label="More Buttons" class="ng-scope ng-isolate-scope"></md-tab>
+            <md-tab label="Even More Buttons" class="ng-scope ng-isolate-scope"></md-tab>
+    <md-tab label="Sliders" class="ng-scope ng-isolate-scope"></md-tab>
+</md-tab-data> <!-- ngIf: $mdTabsCtrl.shouldPaginate --> <!-- ngIf: $mdTabsCtrl.shouldPaginate --> <md-tabs-canvas tabindex="0" aria-activedescendant="tab-item-6" ng-focus="$mdTabsCtrl.redirectFocus()" ng-class="{ 'md-paginated': $mdTabsCtrl.shouldPaginate, 'md-center-tabs': $mdTabsCtrl.shouldCenterTabs }" ng-keydown="$mdTabsCtrl.keydown($event)" role="tablist"> <md-pagination-wrapper ng-class="{ 'md-center-tabs': $mdTabsCtrl.shouldCenterTabs }" md-tab-scroll="$mdTabsCtrl.scroll($event)" style="width: 0px; transform: translate3d(0px, 0px, 0px);"> <!-- ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple md-active" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-6" aria-selected="true" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 843px;"><span class="ng-scope">Search</span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-7" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 843px;"><span class="ng-scope">Inputs</span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-8" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 843px;"><span class="ng-scope">Buttons</span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-9" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 843px;"><span class="ng-scope">More Buttons</span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-10" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 843px;"><span class="ng-scope">Even More Buttons</span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-tab-item tabindex="-1" class="md-tab ng-scope ng-isolate-scope md-ink-ripple" ng-repeat="tab in $mdTabsCtrl.tabs" role="tab" aria-controls="tab-content-11" aria-selected="false" aria-disabled="false" ng-click="$mdTabsCtrl.select(tab.getIndex())" ng-class="{ 'md-active':    tab.isActive(), 'md-focused':   tab.hasFocus(), 'md-disabled':  tab.scope.disabled }" ng-disabled="tab.scope.disabled" md-swipe-left="$mdTabsCtrl.nextPage()" md-swipe-right="$mdTabsCtrl.previousPage()" md-tabs-template="::tab.label" md-scope="::tab.parent" style="max-width: 843px;"><span class="ng-scope">Sliders</span></md-tab-item><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --> <md-ink-bar class="" style="left: 0px; right: 0px;"></md-ink-bar> </md-pagination-wrapper> <md-tabs-dummy-wrapper class="md-visually-hidden md-dummy-wrapper"> <!-- ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-6" role="tab" aria-controls="tab-content-6" aria-selected="true" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Search</span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-7" role="tab" aria-controls="tab-content-7" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Inputs</span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-8" role="tab" aria-controls="tab-content-8" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Buttons</span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-9" role="tab" aria-controls="tab-content-9" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">More Buttons</span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-10" role="tab" aria-controls="tab-content-10" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Even More Buttons</span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --><md-dummy-tab class="md-tab ng-scope ng-isolate-scope" tabindex="-1" id="tab-item-11" role="tab" aria-controls="tab-content-11" aria-selected="false" aria-disabled="false" ng-focus="$mdTabsCtrl.hasFocus = true" ng-blur="$mdTabsCtrl.hasFocus = false" ng-repeat="tab in $mdTabsCtrl.tabs" md-tabs-template="::tab.label" md-scope="::tab.parent"><span class="ng-scope">Sliders</span></md-dummy-tab><!-- end ngRepeat: tab in $mdTabsCtrl.tabs --> </md-tabs-dummy-wrapper> </md-tabs-canvas> </md-tabs-wrapper> <md-tabs-content-wrapper ng-show="$mdTabsCtrl.hasContent &amp;&amp; $mdTabsCtrl.selectedIndex >= 0" class="_md" aria-hidden="false"> <!-- ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><md-tab-content id="tab-content-6" class="_md ng-scope md-active md-no-scroll" role="tabpanel" aria-labelledby="tab-item-6" md-swipe-left="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(1)" md-swipe-right="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(-1)" ng-if="$mdTabsCtrl.hasContent" ng-repeat="(index, tab) in $mdTabsCtrl.tabs" ng-class="{ 'md-no-transition': $mdTabsCtrl.lastSelectedIndex == null, 'md-active':        tab.isActive(), 'md-left':          tab.isLeft(), 'md-right':         tab.isRight(), 'md-no-scroll':     $mdTabsCtrl.dynamicHeight }" style=""> <!-- ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --><div md-tabs-template="::tab.template" md-connected-if="tab.isActive()" md-scope="::tab.parent" ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()" class="ng-scope ng-isolate-scope">
+            <div layout="row" flex="" class="ng-scope layout-row flex">
+            <form action="http://www.google.com/search" class="ng-pristine ng-valid">
+            <md-input-container class="md-block md-icon-float md-title" width="500px">
+              <label id="q_label" for="q">Search Google</label>
+              <input type="text" name="q" id="q" flex="" class="md-input flex"><div class="md-errors-spacer"></div>
+            </md-input-container>
+            <input type="hidden" name="ie" value="utf-8">
+            <input type="hidden" name="oe" value="utf-8">
+            
+        </form>
+        <form action="http://www.bing.com/search" class="ng-pristine ng-valid">
+            <md-input-container class="md-block md-icon-float md-title flex" flex="">
+              <label id="q_label" for="q">Search Bing</label>
+              <input type="text" name="q" id="q" flex="" class="md-input flex"><div class="md-errors-spacer"></div>
+            </md-input-container>
+            <input type="hidden" name="ie" value="utf-8">
+            <input type="hidden" name="oe" value="utf-8">
+        </form>
+        <form action="http://www.yahoo.com/search" class="ng-pristine ng-valid">
+            <md-input-container class="md-block md-icon-float md-title flex" flex="">
+              <label id="q_label" for="q">Search Yahoo</label>
+              <input type="text" name="q" id="q" flex="" class="md-input flex"><div class="md-errors-spacer"></div>
+            </md-input-container>
+            <input type="hidden" name="ie" value="utf-8">
+            <input type="hidden" name="oe" value="utf-8">
+        </form>
+        <form action="http://www.duckduckgo.com/search" class="ng-pristine ng-valid">
+            <md-input-container class="md-block md-icon-float md-title flex" flex="">
+              <label id="q_label" for="q">Search DuckDuckGo</label>
+              <input type="text" name="q" id="q" flex="" class="md-input flex"><div class="md-errors-spacer"></div>
+            </md-input-container>
+            <input type="hidden" name="ie" value="utf-8">
+            <input type="hidden" name="oe" value="utf-8">
+        </form>
+	<form action="http://www.ask.com/search" class="ng-pristine ng-valid">
+            <md-input-container class="md-block md-icon-float md-title flex" flex="">
+              <label id="q_label" for="q">Search Ask</label>
+              <input type="text" name="q" id="q" flex="" class="md-input flex"><div class="md-errors-spacer"></div>
+            </md-input-container>
+            <input type="hidden" name="ie" value="utf-8">
+            <input type="hidden" name="oe" value="utf-8">
+        </form>
+    </div>
+    </div><!-- end ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --> </md-tab-content><!-- end ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><md-tab-content id="tab-content-7" class="_md ng-scope md-right md-no-scroll" role="tabpanel" aria-labelledby="tab-item-7" md-swipe-left="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(1)" md-swipe-right="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(-1)" ng-if="$mdTabsCtrl.hasContent" ng-repeat="(index, tab) in $mdTabsCtrl.tabs" ng-class="{ 'md-no-transition': $mdTabsCtrl.lastSelectedIndex == null, 'md-active':        tab.isActive(), 'md-left':          tab.isLeft(), 'md-right':         tab.isRight(), 'md-no-scroll':     $mdTabsCtrl.dynamicHeight }" style=""> <!-- ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --><div md-tabs-template="::tab.template" md-connected-if="tab.isActive()" md-scope="::tab.parent" ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()" class="ng-scope ng-isolate-scope">
+          <div layout-gt-sm="row" class="ng-scope layout-gt-sm-row">
+            <md-input-container class="md-block md-title" style="width:400px;">
+              <label for="input_12">Type around in this fidgeting input</label>
+              <input ng-model="title.text" class="ng-pristine ng-untouched ng-valid md-input ng-empty" id="input_12" aria-invalid="false"><div class="md-errors-spacer"></div>
+            </md-input-container>
+            <md-input-container class="md-title _md-datepicker-floating-label _md-datepicker-has-calendar-icon">
+              <label>&amp; pick a date</label>
+              <md-datepicker ng-model="user.submissionDate" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty ng-valid-mindate ng-valid-maxdate ng-valid-filtered ng-valid-valid" tabindex="-1" aria-invalid="false"><button class="md-datepicker-button md-icon-button md-button md-ink-ripple" type="button" ng-transclude="" tabindex="-1" aria-hidden="true" ng-click="ctrl.openCalendarPane($event)"><md-icon class="md-datepicker-calendar-icon ng-scope" aria-label="md-calendar" md-svg-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgM2gtMVYxaC0ydjJIOFYxSDZ2Mkg1Yy0xLjExIDAtMS45OS45LTEuOTkgMkwzIDE5YzAgMS4xLjg5IDIgMiAyaDE0YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMTZINVY4aDE0djExek03IDEwaDV2NUg3eiIvPjwvc3ZnPg==" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"></path></svg></md-icon></button><div class="md-datepicker-input-container" ng-class="{'md-datepicker-focused': ctrl.isFocused}"><input class="md-datepicker-input md-input" aria-haspopup="true" ng-focus="ctrl.setFocused(true)" ng-blur="ctrl.setFocused(false)" id="input_14" size="3"><button class="md-datepicker-triangle-button md-icon-button md-button" type="button" ng-transclude="" md-no-ink="" ng-click="ctrl.openCalendarPane($event)" aria-label="Open calendar"><div class="md-datepicker-expand-triangle ng-scope"></div></button></div><div class="md-datepicker-calendar-pane md-whiteframe-z1" id="md-date-pane13"><div class="md-datepicker-input-mask"><div class="md-datepicker-input-mask-opaque"></div></div><div class="md-datepicker-calendar"><!-- ngIf: ctrl.isCalendarOpen --></div></div></md-datepicker><div><div class="md-errors-spacer"></div></div>
+            </md-input-container>
+          </div>
+          <h2 class="ng-binding ng-scope"></h2>
+        </div><!-- end ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --> </md-tab-content><!-- end ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><md-tab-content id="tab-content-8" class="_md ng-scope md-right md-no-scroll" role="tabpanel" aria-labelledby="tab-item-8" md-swipe-left="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(1)" md-swipe-right="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(-1)" ng-if="$mdTabsCtrl.hasContent" ng-repeat="(index, tab) in $mdTabsCtrl.tabs" ng-class="{ 'md-no-transition': $mdTabsCtrl.lastSelectedIndex == null, 'md-active':        tab.isActive(), 'md-left':          tab.isLeft(), 'md-right':         tab.isRight(), 'md-no-scroll':     $mdTabsCtrl.dynamicHeight }"> <!-- ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --><div md-tabs-template="::tab.template" md-connected-if="tab.isActive()" md-scope="::tab.parent" ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()" class="ng-scope ng-isolate-scope">
+          <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="layout-wrap ng-scope layout-sm-column layout-align-center-center layout-row">
+            <button class="md-button md-ink-ripple" type="button" ng-transclude=""><span class="ng-scope">Some buttons to click</span></button>
+            <button class="md-primary md-button" type="button" ng-transclude="" md-no-ink=""><span class="ng-scope">No ripple</span></button>
+            <button class="md-primary md-button md-ink-ripple" type="button" ng-transclude="" ng-disabled="true" disabled="disabled"><span class="ng-scope">Disabled (dunno why you'll click)</span></button>
+            <button class="md-warn md-button md-ink-ripple" type="button" ng-transclude=""><span class="ng-scope">Warn button</span></button>
+          </section>
+        </div><!-- end ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --> </md-tab-content><!-- end ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><md-tab-content id="tab-content-9" class="_md ng-scope md-right md-no-scroll" role="tabpanel" aria-labelledby="tab-item-9" md-swipe-left="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(1)" md-swipe-right="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(-1)" ng-if="$mdTabsCtrl.hasContent" ng-repeat="(index, tab) in $mdTabsCtrl.tabs" ng-class="{ 'md-no-transition': $mdTabsCtrl.lastSelectedIndex == null, 'md-active':        tab.isActive(), 'md-left':          tab.isLeft(), 'md-right':         tab.isRight(), 'md-no-scroll':     $mdTabsCtrl.dynamicHeight }"> <!-- ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --><div md-tabs-template="::tab.template" md-connected-if="tab.isActive()" md-scope="::tab.parent" ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()" class="ng-scope ng-isolate-scope"><section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="layout-wrap ng-scope layout-sm-column layout-align-center-center layout-row">
+      <button class="md-raised md-button md-ink-ripple" type="button" ng-transclude=""><span class="ng-scope">More buttons to click</span></button>
+      <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-transclude=""><span class="ng-scope">This is nice</span></button>
+      <button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-transclude="" ng-disabled="true" disabled="disabled"><span class="ng-scope">Disabled again, don't click(why would you?)</span></button>
+      <button class="md-raised md-warn md-button md-ink-ripple" type="button" ng-transclude=""><span class="ng-scope">I'm warning you</span></button>
+  </section>
+    </div><!-- end ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --> </md-tab-content><!-- end ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><md-tab-content id="tab-content-10" class="_md ng-scope md-right md-no-scroll" role="tabpanel" aria-labelledby="tab-item-10" md-swipe-left="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(1)" md-swipe-right="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(-1)" ng-if="$mdTabsCtrl.hasContent" ng-repeat="(index, tab) in $mdTabsCtrl.tabs" ng-class="{ 'md-no-transition': $mdTabsCtrl.lastSelectedIndex == null, 'md-active':        tab.isActive(), 'md-left':          tab.isLeft(), 'md-right':         tab.isRight(), 'md-no-scroll':     $mdTabsCtrl.dynamicHeight }"> <!-- ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --><div md-tabs-template="::tab.template" md-connected-if="tab.isActive()" md-scope="::tab.parent" ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()" class="ng-scope ng-isolate-scope">
+            <label layout-align="center center" style="text-align:center;" class="ng-scope layout-align-center-center">Some Round buttons (FABs) to click</label>
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="layout-wrap ng-scope layout-sm-column layout-align-center-center layout-row">
+        
+        <button class="md-fab md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Eat cake">
+            <md-icon class="ng-scope material-icons"><i class="material-icons">cake</i></md-icon>
+        </button>
+
+        <button class="md-fab md-primary md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Use Android">
+          <md-icon class="ng-scope material-icons"><i class="material-icons">android</i></md-icon>
+        </button>
+
+        <button class="md-fab md-button md-ink-ripple" type="button" ng-transclude="" ng-disabled="true" aria-label="Comment" disabled="disabled">
+            <md-icon class="ng-scope material-icons"><i class="material-icons">comment</i></md-icon>
+        </button>
+
+        <button class="md-fab md-primary md-hue-2 md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Profile">
+            <md-icon class="ng-scope material-icons"><i class="material-icons">people</i></md-icon>
+        </button>
+
+        <button class="md-fab md-mini md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Eat cake">
+            
+            <md-icon class="ng-scope material-icons"><i class="material-icons">cake</i></md-icon>
+        </button>
+
+        <button class="md-fab md-mini md-primary spinning md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Use Android">
+          
+          <md-icon class="ng-scope material-icons"><i class="material-icons">arrow_back</i></md-icon>
+        </button>
+        <button class="md-fab md-mini md-primary spinning md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Use Android">
+          
+          <md-icon class="ng-scope material-icons"><i class="material-icons">arrow_forward</i></md-icon>
+        </button>
+        <button class="md-icon-button md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Custom Icon Button">
+    <md-icon class="ng-scope material-icons"><i class="material-icons">face</i></md-icon>
+        </button>
+    </section></div><!-- end ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --> </md-tab-content><!-- end ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --><!-- ngIf: $mdTabsCtrl.hasContent --><md-tab-content id="tab-content-11" class="_md ng-scope md-right md-no-scroll" role="tabpanel" aria-labelledby="tab-item-11" md-swipe-left="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(1)" md-swipe-right="$mdTabsCtrl.swipeContent &amp;&amp; $mdTabsCtrl.incrementIndex(-1)" ng-if="$mdTabsCtrl.hasContent" ng-repeat="(index, tab) in $mdTabsCtrl.tabs" ng-class="{ 'md-no-transition': $mdTabsCtrl.lastSelectedIndex == null, 'md-active':        tab.isActive(), 'md-left':          tab.isLeft(), 'md-right':         tab.isRight(), 'md-no-scroll':     $mdTabsCtrl.dynamicHeight }"> <!-- ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --><div md-tabs-template="::tab.template" md-connected-if="tab.isActive()" md-scope="::tab.parent" ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()" class="ng-scope ng-isolate-scope">
+        <label flex="" class="ng-binding ng-scope flex">Slide this around! Value is </label>
+          <div layout-gt-sm="row" class="ng-scope layout-gt-sm-row">
+              <md-slider-container class="md-block _md" style="width:500px;">
+              <md-slider flex="" min="0" max="500" ng-model="slider.value" value="0" aria-label="Slide this around! Value is " class="ng-pristine ng-untouched ng-valid ng-isolate-scope md-min flex ng-empty" aria-valuemin="0" aria-valuenow="NaN" aria-valuemax="500" aria-invalid="false"><div class="md-slider-wrapper" tabindex="0" role="slider" style="touch-action: pan-x;"><div class="md-slider-content"><div class="md-track-container"><div class="md-track"></div><div class="md-track md-track-fill" style="width: 0%;"></div><div class="md-track-ticks"></div></div><div class="md-thumb-container" style="left: 0%;"><div class="md-thumb"></div><div class="md-focus-thumb"></div><div class="md-focus-ring"></div><div class="md-sign"><span class="md-thumb-text">NaN</span></div><div class="md-disabled-thumb"></div></div></div></div></md-slider>
+            </md-slider-container>
+          </div>
+        </div><!-- end ngIf: $mdTabsCtrl.enableDisconnect || tab.shouldRender() --> </md-tab-content><!-- end ngIf: $mdTabsCtrl.hasContent --><!-- end ngRepeat: (index, tab) in $mdTabsCtrl.tabs --> </md-tabs-content-wrapper></md-tabs>
+<script src="fidget.js"></script>
+
+
+
+
+</body>
