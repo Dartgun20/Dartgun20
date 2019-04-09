@@ -20,32 +20,32 @@
   border: 2px solid #4CAF50;
 }
 .button1:hover {
-  style="background-color: #4CAF50;
+  background-color: #4CAF50;
   border-radius: 12px;
   border: 2px solid #4CAF50;
-  color: #4CAF50;"
+  color: #4CAF50;
 }
 .button2 {
-  style="background-color: #FF0000;
+  background-color: #FF0000;
   border-radius: 12px;
   border: 2px solid #FF0000;
-  color: #000000;"
+  color: #000000;
 }
 .button2:hover {
-  style="background-color: #FF0000;
+  background-color: #FF0000;
   color: #FF0000;
-  border-radius: 12px;"
+  border-radius: 12px;
  }
 .button3 {
-  style="background-color= #40e0d0;
-  border: 2px solid #FF0000;"
+  background-color= #40e0d0;
+  border: 2px solid #FF0000;
 }
 .button3:hover {
-  style="border-radius: 12px;"
+  border-radius: 12px;
 }
 .button5 {
-  style="background-color: #FF0000;
+  background-color: #FF0000;
   color: #FFFFFF;
-  border-radius: 12px;"
+  border-radius: 12px;
 </style>
 </head>
